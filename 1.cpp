@@ -117,6 +117,19 @@ public:
 
     return difference;
   }
+
+void printCartesianSet(const set<int>& S1, const set<int>& S2) {
+    
+    cout << "Cartesian Product Sets: " << endl;
+    
+    for (const auto& x : S1) {
+        for (const auto& y : S2) {
+            cout << x << " " << y << endl;
+        }
+    }
+    cout << endl;
+    
+} 
 };
 
 int main() {
@@ -126,7 +139,7 @@ int main() {
   s.add(3);
 
   set<int> s2 = {1,2,3,4};
-  set<int> s3 = {3,4,6,7};
+  set<int> s3 = {0,3,4,6,7};
   set<int> uniset = {1,2,3,4,5,6,7,8,9};
     
   s.printPowerSet();
@@ -154,6 +167,9 @@ int main() {
   set<int> difference = s.getSymmetricDifference(s2, s3);
   for (auto element: difference) {
     cout << element << " ";
+
+  printCartesianSet(s2, s3);
+    
 
   return 0;
 }
