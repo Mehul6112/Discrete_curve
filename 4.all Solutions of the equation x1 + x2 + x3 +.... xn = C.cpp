@@ -4,10 +4,10 @@
 
 #include <iostream>
 #include <vector>
-
+using namespace std;
 int c = 8;
 
-void fun(std::vector<int> a, int n) {
+void fun(vector<int> a, int n) {
     int s = 0;
     for (int i = 0; i < a.size(); i++) {
         s += a[i];
@@ -15,9 +15,9 @@ void fun(std::vector<int> a, int n) {
     if (n == 1) {
         a.push_back(c - s);
         for (int i = 0; i < a.size(); i++) {
-            std::cout << a[i] << " ";
+            cout << a[i] << " ";
         }
-        std::cout << std::endl;
+        cout << endl;
     } else {
         for (int i = 0; i <= c - s; i++) {
             a.push_back(i);
@@ -29,7 +29,7 @@ void fun(std::vector<int> a, int n) {
 
 int main() {
     int n = 3;
-    std::vector<int> a;
+    vector<int> a;
     fun(a, n);
     return 0;
 }
